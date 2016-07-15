@@ -1,0 +1,48 @@
+{
+  "name": "os-uptime",
+  "version": "1.0.0",
+  "description": "returns of the uptime of the OS as a date",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "test": "mocha '*.spec.js'",
+    "test:watch": "npm test -- -w -b"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:oroce/node-os-uptime.git"
+  },
+  "keywords": [
+    "uptime",
+    "who",
+    "-b",
+    "sysctl",
+    "kern.boottime",
+    "linux",
+    "osx",
+    "mac"
+  ],
+  "author": "oroce <robert@oroszi.net>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/oroce/node-os-uptime/issues"
+  },
+  "homepage": "https://github.com/oroce/node-os-uptime",
+  "devDependencies": {
+    "eslint": "^3.0.1",
+    "eslint-config-pi": "^6.0.0",
+    "mocha": "^2.5.3",
+    "pmock": "^0.2.3",
+    "pre-commit": "^1.1.3",
+    "proxyquire": "^1.7.10"
+  },
+  "pre-commit": [
+    "test"
+  ],
+  "files": [
+    "darwin.js",
+    "index.js",
+    "linux.js"
+  ]
+}

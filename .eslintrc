@@ -1,0 +1,24 @@
+{
+  "extends": [
+    "pi"
+  ],
+  "env": {
+    "node": true,
+    "es6": true
+  },
+  "globals": {
+    "describe": true,
+    "it": true,
+    "xit": true,
+    "before": true,
+    "after": true,
+    "beforeEach": true,
+    "afterEach": true,
+    "Promise": true,
+  },
+  "rules": {
+    "object-curly-spacing": 0,
+    "max-len": 0,
+    "no-continue": 1
+  },
+}
