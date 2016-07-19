@@ -16,7 +16,7 @@ npm install os-uptime
 ```
 const uptime = require('os-uptime');
 
-console.log('System was started at: %s', uptime().toLocaleString()).
+console.log('System was started at: %s', uptime().toLocaleString());
 ```
 
 # LICENSE
