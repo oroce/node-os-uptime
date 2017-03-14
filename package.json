@@ -43,6 +43,7 @@
   "files": [
     "darwin.js",
     "index.js",
+    "win32.js",
     "linux.js"
   ]
 }
