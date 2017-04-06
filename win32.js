@@ -2,6 +2,6 @@
 const execSync = require('child_process').execSync;
 module.exports = () => {
   const output = execSync('net statistics workstation').toString();
-  const date = output.split('\r')[3].replace('\nStatistics since ').trim();
-  return new Date(date);
+  const date = output.match(/\d{2}\.\d{2}\.\d{4} \d{2}:\d{2}:\d{2}/gm);
+  return new Date(date[0]);
 };
