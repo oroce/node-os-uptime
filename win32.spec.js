@@ -7,10 +7,10 @@ describe('win32', () => {
       'child_process': {
         execSync: (cmd) => {
           assert.equal(cmd, 'net statistics workstation', 'should call net statistics workstation command');
-          return new Buffer('{ sec = 1467288928, usec = 0 } Thu Jun 30 14:15:28 2016');
+          return new Buffer('06.04.2017 23:22:11');
         }
       }
     });
-    assert.equal(win32().toLocaleString(), '6/30/2016, 2:15:28 PM', 'should equal the date');
+    assert.equal(win32().toLocaleString(), '6/4/2017, 11:22:11 PM', 'should equal the date');
   });
 });
