@@ -3,7 +3,11 @@ os-uptime
 
 Get operating system's uptime as a date.
 
-It depends on `uptime -s` on linux and `sysctl -n kern.boottime` on darwin
+For each platform a different command is used to retrieve the uptime as a date. The commands are as follows:
+
+* linux - `uptime -s`
+* darwin - `sysctl -n kern.boottime`
+* win32 - `net statistics workstation`
 
 ---
 
