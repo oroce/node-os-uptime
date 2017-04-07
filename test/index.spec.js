@@ -17,13 +17,13 @@ describe('index', function () {
 
     it('should require darwin', function () {
       let uptime = proxyquire('../index', {
-        './platform/darwin': {
+        './lib/darwin': {
           type: 'darwin'
         },
-        './platform/linux': {
+        './lib/linux': {
           type: 'linux'
         },
-        './platform/win32': {
+        './lib/win32': {
           type: 'win32'
         }
       });
@@ -42,10 +42,10 @@ describe('index', function () {
         './plaform/darwin': {
           type: 'darwin'
         },
-        './platform/linux': {
+        './lib/linux': {
           type: 'linux'
         },
-        './platform/win32': {
+        './lib/win32': {
           type: 'win32'
         }
       });
@@ -61,13 +61,13 @@ describe('index', function () {
 
     it('should require win32', function () {
       let uptime = proxyquire('../index', {
-        './plaform/darwin': {
+        './lib/darwin': {
           type: 'darwin'
         },
-        './platform/linux': {
+        './lib/linux': {
           type: 'linux'
         },
-        './platform/win32': {
+        './lib/win32': {
           type: 'win32'
         }
       });
