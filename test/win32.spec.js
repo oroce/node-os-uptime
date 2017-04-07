@@ -13,6 +13,6 @@ describe('win32', () => {
       }
     });
 
-    assert.equal(win32().toLocaleString(), '6/4/2017, 11:22:11 PM', 'should equal the date');
+    assert.equal(win32().toLocaleString(), '4/6/2017, 11:22:11 PM', 'should equal the date');
   });
 });
