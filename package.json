@@ -40,8 +40,11 @@
   "pre-commit": [
     "test"
   ],
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
   "files": [
-    "index.js",
-    "./lib/*.js"
+    "index.js"
   ]
 }
