@@ -2,11 +2,13 @@
 const proxyquire = require('proxyquire');
 const assert = require('assert');
 const pmock = require('pmock');
+
 afterEach(function () {
   if (this.platformMock) {
     this.platformMock.restore();
   }
 });
+
 describe('index', function () {
   describe('darwin', function () {
     before(function () {
@@ -14,14 +16,14 @@ describe('index', function () {
     });
 
     it('should require darwin', function () {
-      const uptime = proxyquire('./index', {
-        './darwin': {
+      let uptime = proxyquire('../index', {
+        './platform/darwin': {
           type: 'darwin'
         },
-        './linux': {
+        './platform/linux': {
           type: 'linux'
         },
-        './win32': {
+        './platform/win32': {
           type: 'win32'
         }
       });
@@ -36,14 +38,14 @@ describe('index', function () {
     });
 
     it('should require linux', function () {
-      const uptime = proxyquire('./index', {
-        './darwin': {
+      let uptime = proxyquire('../index', {
+        './plaform/darwin': {
           type: 'darwin'
         },
-        './linux': {
+        './platform/linux': {
           type: 'linux'
         },
-        './win32': {
+        './platform/win32': {
           type: 'win32'
         }
       });
@@ -58,14 +60,14 @@ describe('index', function () {
     });
 
     it('should require win32', function () {
-      const uptime = proxyquire('./index', {
-        './darwin': {
+      let uptime = proxyquire('../index', {
+        './plaform/darwin': {
           type: 'darwin'
         },
-        './linux': {
+        './platform/linux': {
           type: 'linux'
         },
-        './win32': {
+        './platform/win32': {
           type: 'win32'
         }
       });

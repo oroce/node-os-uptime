@@ -1,9 +1,10 @@
 'use strict';
 const proxyquire = require('proxyquire');
 const assert = require('assert');
+
 describe('win32', () => {
   it('should parse the date', () => {
-    const win32 = proxyquire('./win32', {
+    let win32 = proxyquire('../platform/win32', {
       'child_process': {
         execSync: (cmd) => {
           assert.equal(cmd, 'net statistics workstation', 'should call net statistics workstation command');
@@ -11,6 +12,7 @@ describe('win32', () => {
         }
       }
     });
+
     assert.equal(win32().toLocaleString(), '6/4/2017, 11:22:11 PM', 'should equal the date');
   });
 });

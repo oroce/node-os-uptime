@@ -1,9 +1,10 @@
 'use strict';
 const proxyquire = require('proxyquire');
 const assert = require('assert');
+
 describe('darwin', () => {
   it('should parse the date', () => {
-    const darwin = proxyquire('./darwin', {
+    let darwin = proxyquire('../platform/darwin', {
       'child_process': {
         execSync: (cmd) => {
           assert.equal(cmd, 'sysctl -n kern.boottime', 'should call sysctl command');
@@ -11,6 +12,7 @@ describe('darwin', () => {
         }
       }
     });
+
     assert.equal(darwin().toLocaleString(), '6/30/2016, 2:15:28 PM', 'should equal the date');
   });
 });
