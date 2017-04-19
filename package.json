@@ -6,7 +6,7 @@
   "scripts": {
     "lint": "eslint .",
     "pretest": "npm run lint",
-    "test": "mocha '*.spec.js'",
+    "test": "mocha \"*.spec.js\"",
     "test:watch": "npm test -- -w -b"
   },
   "repository": {
