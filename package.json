@@ -6,7 +6,7 @@
   "scripts": {
     "lint": "eslint .",
     "pretest": "npm run lint",
-    "test": "mocha './test/*.spec.js'",
+    "test": "mocha \"*.spec.js\"",
     "test:watch": "npm test -- -w -b"
   },
   "repository": {
@@ -40,10 +40,10 @@
   "pre-commit": [
     "test"
   ],
-  "directories": {},
   "files": [
+    "darwin.js",
     "index.js",
-    "lib",
-    "test"
+    "linux.js",
+    "win32"
   ]
 }

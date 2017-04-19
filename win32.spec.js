@@ -4,7 +4,7 @@ const assert = require('assert');
 
 describe('win32', () => {
   it('should parse the date', () => {
-    let win32 = proxyquire('../lib/win32', {
+    let win32 = proxyquire('./win32', {
       'child_process': {
         execSync: (cmd) => {
           assert.equal(cmd, 'net statistics workstation', 'should call net statistics workstation command');

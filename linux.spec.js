@@ -4,7 +4,7 @@ const assert = require('assert');
 
 describe('linux', () => {
   it('should parse the date', () => {
-    let linux = proxyquire('../lib/linux', {
+    let linux = proxyquire('./linux', {
       'child_process': {
         execSync: (cmd) => {
           assert.equal(cmd, 'uptime -s', 'should call uptime command');

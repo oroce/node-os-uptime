@@ -4,7 +4,7 @@ const assert = require('assert');
 
 describe('darwin', () => {
   it('should parse the date', () => {
-    let darwin = proxyquire('../lib/darwin', {
+    let darwin = proxyquire('./darwin', {
       'child_process': {
         execSync: (cmd) => {
           assert.equal(cmd, 'sysctl -n kern.boottime', 'should call sysctl command');
