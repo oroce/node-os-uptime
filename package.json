@@ -44,6 +44,6 @@
     "darwin.js",
     "index.js",
     "linux.js",
-    "win32"
+    "win32.js"
   ]
 }
