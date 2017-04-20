@@ -1,6 +1,7 @@
 'use strict';
 const proxyquire = require('proxyquire');
 const assert = require('assert');
+
 describe('linux', () => {
   it('should parse the date', () => {
     const linux = proxyquire('./linux', {
