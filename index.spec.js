@@ -16,7 +16,7 @@ describe('index', function () {
     });
 
     it('should require darwin', function () {
-      let uptime = proxyquire('./index', {
+      const uptime = proxyquire('./index', {
         './darwin': {
           type: 'darwin'
         },
@@ -38,7 +38,7 @@ describe('index', function () {
     });
 
     it('should require linux', function () {
-      let uptime = proxyquire('./index', {
+      const uptime = proxyquire('./index', {
         './darwin': {
           type: 'darwin'
         },
@@ -60,7 +60,7 @@ describe('index', function () {
     });
 
     it('should require win32', function () {
-      let uptime = proxyquire('./index', {
+      const uptime = proxyquire('./index', {
         './darwin': {
           type: 'darwin'
         },
