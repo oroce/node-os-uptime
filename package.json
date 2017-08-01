@@ -24,6 +24,10 @@
     "mac"
   ],
   "author": "oroce <robert@oroszi.net>",
+  "contributors": [
+    "Jakob Krigovsky <jakob@krigovsky.com>",
+    "Stefan Cosma <hello@stefancosma.xyz>"
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/oroce/node-os-uptime/issues"
