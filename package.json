@@ -1,6 +1,6 @@
 {
   "name": "os-uptime",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "returns of the uptime of the OS as a date",
   "main": "index.js",
   "scripts": {
